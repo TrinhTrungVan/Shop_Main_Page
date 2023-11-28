@@ -591,6 +591,8 @@ ul {
   left: 0;
   padding: 32px;
   width: 400px;
+  height: 100vh;
+  overflow: auto;
   transform: translateX(-100%);
   transition: transform linear 0.2s;
  }
