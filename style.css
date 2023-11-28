@@ -590,7 +590,7 @@ ul {
   top: 0;
   left: 0;
   padding: 32px;
-  width: 400px;
+  width: 300px;
   height: 100vh;
   overflow: auto;
   transform: translateX(-100%);
@@ -635,6 +635,7 @@ ul {
  }
 
  .sidebar__close {
+  display: block;
   position: absolute;
   top: 32px;
   right: 32px;
