@@ -574,6 +574,10 @@ ul {
  transform: rotate(90deg);
 }
 
+#sidebar__status {
+ display: none;
+}
+
 .sidebar__mobile {
  display: none;
 }
