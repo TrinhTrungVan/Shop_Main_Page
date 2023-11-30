@@ -272,33 +272,6 @@ ul {
 
  .navbar__content .navbar__menu {
   display: none;
-  flex-direction: column;
-  position: absolute;
-  z-index: 10;
-  border: 2px solid #b6c6c9;
-  background-color: #fff;
-  border-radius: 4px;
-  width: 200px;
-  top: 0;
-  left: 48px;
- }
-
- .navbar__content .navbar__menu li {
-  width: 100%;
-  padding: 16px;
-  margin: 0;
-  text-align: center;
- }
-
- .navbar__content:hover .navbar__menu {
-  display: flex;
- }
-
- .navbar__mobile::before {
-  content: '';
-  position: absolute;
-  width: 50px;
-  height: 50px;
  }
 }
 
@@ -491,6 +464,10 @@ ul {
  padding-top: 111px;
 }
 
+.main__container #sidebar__status {
+ display: none;
+}
+
 @media (max-width: 1280px) {
  .main {
   padding: 0 24px;
@@ -502,6 +479,10 @@ ul {
 .sidebar {
  width: 260px;
  margin-right: 42px;
+}
+
+.sidebar .navbar__menu {
+ display: none;
 }
 
 .sidebar__section__title {
@@ -574,10 +555,6 @@ ul {
  transform: rotate(90deg);
 }
 
-#sidebar__status {
- display: none;
-}
-
 .sidebar__mobile {
  display: none;
 }
@@ -586,7 +563,7 @@ ul {
  display: none;
 }
 
-@media (max-width: 986px) {
+@media (max-width: 1280px) {
  .sidebar {
   position: fixed;
   background: #fff;
@@ -594,7 +571,7 @@ ul {
   top: 0;
   left: 0;
   padding: 32px;
-  width: 300px;
+  width: 600px;
   height: 100vh;
   overflow: auto;
   transform: translateX(-100%);
@@ -603,7 +580,44 @@ ul {
 
  .main__container {
   flex-direction: column;
-  padding-top: 0;
+  padding-top: 68px;
+ }
+
+ .sidebar .navbar__menu {
+  display: block;
+  margin: 48px 0;
+ }
+
+ .sidebar .navbar__menu li {
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: #3c3950;
+  font-weight: 700;
+  font-family: 'Montserrat';
+  border-bottom: 1px solid #dce2e4;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ }
+
+ .sidebar .navbar__menu li:last-child {
+  height: 50px;
+ }
+
+ .sidebar .navbar__menu .right__arrow {
+  width: 24px;
+  height: 24px;
+  background-color: #5f727f;
+  -webkit-mask: url('/assets/icons/right-arrow.svg');
+  transition: background-color linear 0.2s, transform linear 0.2s;
+ }
+
+ .sidebar .navbar__menu li:hover {
+  color: #05bdd5;
  }
 
  .sidebar__mobile {
@@ -629,7 +643,6 @@ ul {
  }
 
  #sidebar__status {
-  opacity: 0;
   width: 10px;
   height: 10px;
  }
@@ -644,6 +657,12 @@ ul {
   top: 32px;
   right: 32px;
   cursor: pointer;
+ }
+}
+
+@media (max-width: 768px) {
+ .sidebar {
+  width: 400px;
  }
 }
 

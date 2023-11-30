@@ -71,9 +71,14 @@
         </div>
 
         <nav class="navbar__content">
-          <div class="navbar__mobile">
-            <img src="/assets/icons/menu.svg">
+
+          <!-- Mobile Sidebar -->
+          <div class="sidebar__mobile">
+            <label for="sidebar__status">
+              <img src="/assets/icons/menu.svg">
+            </label>
           </div>
+
           <ul class="navbar__menu">
             <li>Home</li>
             <li>Pages</li>
@@ -135,21 +140,42 @@
     <div class="main">
       <div class="main__container">
 
-        <!-- Mobile Sidebar -->
-        <div class="sidebar__mobile">
-          <label for="sidebar__status">
-            <img src="/assets/icons/menu.svg">
-            Sidebar
-          </label>
-        </div>
-        <input type="checkbox" id="sidebar__status">
-
         <!-- Sidebar -->
+        <input type="checkbox" id="sidebar__status">
         <nav class="sidebar">
           <!-- Close sidebar button -->
           <label for="sidebar__status" class="sidebar__close">
             <img src="/assets/icons/close.svg">
           </label>
+
+          <!-- Navbar -->
+          <ul class="navbar__menu">
+            <li>Home
+              <div class="right__arrow"></div>
+            </li>
+            <li>Pages
+              <div class="right__arrow"></div>
+            </li>
+            <li>Blog
+              <div class="right__arrow"></div>
+            </li>
+            <li>Portfolio
+              <div class="right__arrow"></div>
+            </li>
+            <li class="active">Shop
+              <div class="right__arrow"></div>
+            </li>
+            <li>Features
+              <div class="right__arrow"></div>
+            </li>
+            <li>Elements
+              <div class="right__arrow"></div>
+            </li>
+            <li class="navbar__language">
+              <img src="./assets/icons/usa-flag.svg">
+              <div class="right__arrow"></div>
+            </li>
+          </ul>
 
           <!-- Categories -->
           <div class="sidebar__categories">
